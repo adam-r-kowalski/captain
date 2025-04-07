@@ -46,14 +46,14 @@ fn Home(onkeydown: EventHandler<KeyboardEvent>) -> Element {
         }
         div {
             class: "h-svh flex flex-col p-safe",
-            class: "bg-amber-50 text-stone-800",
+            class: "bg-stone-200 text-stone-800",
             class: "dark:bg-stone-900 dark:text-amber-100",
             onkeydown,
             tabindex: 0,
             h1 { class: "flex-1 flex items-center justify-center text-4xl", "{greeting()}, Adam!" }
             form {
                 class: "rounded-lg p-2 flex flex-col gap-2 shadow-md border",
-                class: "bg-white border-stone-200",
+                class: "bg-stone-100 border-stone-200",
                 class: "dark:bg-stone-800 dark:border-2 dark:border-stone-700",
                 onsubmit: move |e| {
                     e.prevent_default();

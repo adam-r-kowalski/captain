@@ -2,7 +2,7 @@
 
 @layer utilities {
   .p-safe {
-    --safe-p: theme('spacing.2'); 
+    --safe-p: theme('spacing.4'); 
 
     padding-top: calc(env(safe-area-inset-top, 0px) + var(--safe-p));
     padding-right: calc(env(safe-area-inset-right, 0px) + var(--safe-p));
