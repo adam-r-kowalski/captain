@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+@layer utilities {
+  .p-safe {
+    --safe-p: theme('spacing.4'); 
+
+    padding-top: calc(env(safe-area-inset-top, 0px) + var(--safe-p));
+    padding-right: calc(env(safe-area-inset-right, 0px) + var(--safe-p));
+    padding-bottom: calc(env(safe-area-inset-bottom, 0px) + var(--safe-p));
+    padding-left: calc(env(safe-area-inset-left, 0px) + var(--safe-p));
+  }
+}
