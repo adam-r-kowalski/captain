@@ -3,18 +3,18 @@ use chrono::Timelike;
 use dioxus::{events::Key, prelude::*};
 use dioxus_free_icons::{icons::hi_solid_icons as icons, Icon};
 
-const TAILWIND_CSS: Asset = asset!("/assets/tailwind.css");
-
 #[cfg(feature = "desktop")]
 fn main() {
     use dioxus::desktop::{Config, WindowBuilder};
     dioxus::LaunchBuilder::desktop()
         .with_cfg(
-            Config::new().with_window(
-                WindowBuilder::new()
-                    .with_resizable(true)
-                    .with_title("Captain"),
-            ),
+            Config::new()
+                .with_window(
+                    WindowBuilder::new()
+                        .with_resizable(true)
+                        .with_title("Captain"),
+                )
+                .with_menu(None),
         )
         .launch(App);
 }
@@ -39,7 +39,7 @@ fn greeting() -> String {
 fn Home(onkeydown: EventHandler<KeyboardEvent>) -> Element {
     let mut prompt = use_signal(String::new);
     rsx! {
-        document::Link { rel: "stylesheet", href: TAILWIND_CSS }
+        document::Link { rel: "stylesheet", href: asset!("/assets/tailwind.css") }
         meta {
             name: "viewport",
             content: "width=device-width, initial-scale=1, viewport-fit=cover",
