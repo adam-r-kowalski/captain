@@ -5,10 +5,9 @@ authors = ["Adam Kowalski <adam.kowalski.work@gmail.com>"]
 edition = "2021"
 
 [dependencies]
-chrono = { version = "0.4.40", features=["clock"] }
+chrono = { version = "0.4.40", features = ["clock"] }
 dioxus = { version = "0.6.0", features = ["router"] }
 dioxus-free-icons = { version = "0.9.0", features = ["hero-icons-solid"] }
-tracing = "0.1.41"
 
 [target.'cfg(platform = "mobile")'.dependencies]
 dioxus = { version = "0.6.0", features = ["router", "mobile"] }
